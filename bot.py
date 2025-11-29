@@ -2,9 +2,9 @@ import requests
 import time
 import random
 
-BOT_TOKEN = "8536756798:AAHaXa_Zrxu3htBVI-P_jhn6SPyDCpgbeOg"
-ADMIN_ID = 6365371142
-CHANNEL_ID = -1003422486517  # Kanal ID
+BOT_TOKEN = "8383980083:AAGE2_nIsk8dDW6VXv-mCoABFMHK1m4g1ec"
+ADMIN_ID = 712267366
+CHANNEL_ID = -1001266796568  # Kanal ID
 
 API = f"https://api.telegram.org/bot{BOT_TOKEN}/"
 
@@ -166,7 +166,7 @@ def perform_channel_send_from_admin(uid):
         return
     photo_file_id = temp.get("photo_file_id")
     caption = temp.get("caption", "")
-    keyboard = {"inline_keyboard": [[{"text": "Qatnashish", "url": "https://t.me/assalomuqqbot?start=join"}]]}
+    keyboard = {"inline_keyboard": [[{"text": "Qatnashish", "url": "https://t.me/alibet_chotal_bot?start=join"}]]}
     send_photo(CHANNEL_ID, photo_file_id, caption=caption, reply_markup=keyboard)
     send_message(ADMIN_ID, "✅ Xabar kanalga yuborildi.")
     admin_step[uid] = None
